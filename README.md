@@ -9,31 +9,6 @@ Each design pattern is implemented in its own folder with:
 
 ---
 
-## ✅ Structure
-
-/DesignPatterns/
-│
-├── Creational/
-│ ├── Singleton/
-│ ├── Factory/
-│ └── ...
-│
-├── Structural/
-│ ├── Adapter/
-│ ├── Composite/
-│ └── ...
-│
-├── Behavioral/
-│ ├── Observer/
-│ ├── Memento/
-│ └── ...
-│
-├── Program.cs
-└── README.md
-
-
----
-
 ## 🧩 Patterns Implemented
 
 Each pattern includes:
