@@ -1,0 +1,15 @@
+﻿The Memento pattern is a behavioral design pattern that focuses on implementing an undo mechanism.
+It involves three main participants:
+Originator: The object whose internal state we want to save and restore. It has two methods:
+CreateMemento() to generate a snapshot
+Restore(memento) to roll back to a previous state
+Memento: A value object that stores the snapshot of the originator's internal state.
+It should be fully encapsulated — meaning its internal data should only be accessible by the originator,
+and not by the caretaker.
+Caretaker: Responsible for storing the history (a list or stack of mementos). It provides:
+Push() to add a snapshot
+Pop() to retrieve and remove the last snapshot
+The caretaker must not modify or even read the memento’s internal state
+and this can be done by using interface in C#.
+The Memento Pattern is conceptually similar to pressing CTRL + Z ,
+it lets you revert an object to a previous state without exposing its implementation details.
