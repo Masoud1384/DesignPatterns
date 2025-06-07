@@ -1,4 +1,4 @@
-﻿namespace DesignPatterns.Memento;
+﻿namespace DesignPatterns.Behavioral.Memento;
 
 public class CareTaker
 {
@@ -6,7 +6,7 @@ public class CareTaker
 
     public void Push(IMemento memento)
     {
-        this.Mementos.Add(memento);
+        Mementos.Add(memento);
     }
 
     public IMemento Pop()

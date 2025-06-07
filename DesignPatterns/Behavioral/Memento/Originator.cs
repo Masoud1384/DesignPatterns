@@ -1,4 +1,4 @@
-﻿namespace DesignPatterns.Memento;
+﻿namespace DesignPatterns.Behavioral.Memento;
 
 public class Originator
 {
@@ -6,12 +6,12 @@ public class Originator
 
     public IMemento CreateMomento()
     {
-        return new Memento(this.Content);
+        return new Memento(Content);
     }
     public void Restore(IMemento memento)
     {
         if (memento is Memento m)
-            this.Content = m.Content;
+            Content = m.Content;
     }
 
     private class Memento : IMemento
@@ -20,7 +20,7 @@ public class Originator
 
         public Memento(string content)
         {
-            this.Content = content;
+            Content = content;
         }
     }
 
