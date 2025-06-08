@@ -1,0 +1,14 @@
+﻿The state design pattern is another behavioral design pattern which allows us to create a mechanism
+that whenever an object's state changes, the behavior of the object changes too, and also gets rid of
+if/else conditions in the code.
+The state design pattern contains a Context,
+which is the main object that the states belong to.
+An interface for managing the state classes,
+which the whole point of it is having the Handle method of the state classes,
+and as much as it's needed, concrete classes that each is a representative of a state.
+The state of the context can be changed based on any logic outside the concrete classes (external transitions)
+and inside the concrete classes (state-driven transitions).
+Remember: each state must have its own class and it must implement the IState interface or abstract class
+based on the scenario you are using it in, so the Single Responsibility would be followed.
+This pattern is a very good example of the Open/Closed Principle, because whenever we need a new state,
+all we have to do is to add a new class that implements the IState interface or abstract class.
