@@ -4,7 +4,7 @@ public class Originator
 {
     public string Content { get; set; }
 
-    public IMemento CreateMomento()
+    public IMemento CreateMemento()
     {
         return new Memento(Content);
     }

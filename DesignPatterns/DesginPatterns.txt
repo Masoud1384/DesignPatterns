@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DesignPatterns
-{
-    class DesginPatterns
-    {
-    }
-}
+﻿What is a Design Pattern?
+Design patterns are proven solutions to common and recurring problems in software design.
+They provide templates or best practices that developers can use to solve design issues efficiently and consistently.
+There are generally three categories of design patterns, defined by the Gang of Four (GoF):
+Creational Patterns – Deal with object creation mechanisms, trying to create objects in a manner suitable to the situation. 
+Examples include Singleton, Factory Method, and Builder ,etc.
+Structural Patterns – Concerned with how objects and classes are composed to form larger structures. 
+Examples include Adapter, Composite, and Decorator , etc. 
+Behavioral Patterns – Focus on communication between objects and the delegation of responsibilities. 
+Examples include Observer, Strategy, and Command.
+These patterns are language-independent and technology-agnostic, 
+making them mid-level abstractions that can be applied broadly across many projects.
+In addition to these, there are low-level patterns (specific to frameworks or languages) and high-level architectural patterns 
+(such as MVC, MVVM, or microservices) that guide the overall structure of systems.
