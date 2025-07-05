@@ -10,7 +10,7 @@ public class ConcreteClass1 : IState
         // therefore it's not necessary to do the state chaning in somewhere else 
         // and it's being done here automatically so in the Program.cs , there is no need to do it again
         // just call the Request() again and it will call ConcreteClass2
-
-        //context.SetState(new ConcreteClass2());
+        // EXTERNAL TRANSITION VOIOLATES STATE RULES
+        context.SetState(new ConcreteClass2());
     }
 }
