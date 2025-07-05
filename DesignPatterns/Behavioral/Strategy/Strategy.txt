@@ -1,0 +1,22 @@
+﻿The Strategy design pattern is a behavioral design pattern based on composition.
+Its intention is to enable an object to change its behavior at runtime by encapsulating a family of algorithms and making them interchangeable,
+without modifying the main code, eliminates unwanted conditonal statments 
+and also prevents multiple inheritances and Context class complexity,
+This pattern can be implemented with:
+A context class that uses the injected strategy,
+A strategy interface that defines the contract for a specific group of algorithms,
+One or more concrete implementations of that interface.
+At runtime, the required strategy can be passed to the context. 
+The context then calls the appropriate method on the strategy and returns the result, 
+depending on the currently selected algorithm.
+This design pattern is somewhat similar to the State pattern,
+as both allow dynamic behavior changes at runtime.
+However, they differ in their intention and implementation.
+The State pattern aims to automate behavior transitions and this is being done by states themselves 
+but in strategy the client decides to use strategy and has no 'State' , it just has a vary of strategy implementations that can be used by client.
+In this pattern, subclasses representing individual states often hold a reference to the context
+and are responsible for changing the state after they’re executed. These transitions are typically internal and state-driven.
+In contrast, the Strategy pattern allows multiple independent algorithm implementations that can be selected and swapped externally.
+There is no single shared state or automatic transition between strategies.
+Overall, this pattern helps obey the Open/Closed Principle (OCP) and the Single Responsibility Principle (SRP),
+and improves code maintainability, testability, and separation of concerns.

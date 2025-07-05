@@ -2,7 +2,7 @@
 that whenever an object's state changes, the behavior of the object changes too, and also gets rid of
 if/else conditions in the code.
 The state design pattern contains a Context,
-which is the main object that the states belong to.
+which is the Invoker of state and also stateful holder.
 an interface that declares state-specific behavior methods, such as Handle() or domain-specific operations.
 and as much as it's needed, concrete classes that each is a representative of a state.
 The state of the context can not be changed based on any logic outside the concrete classes (external transitions)
