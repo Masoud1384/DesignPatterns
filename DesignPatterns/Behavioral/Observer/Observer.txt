@@ -1,0 +1,24 @@
+﻿The intention of this design pattern is to define a one-to-many dependency between objects,
+so that whenever the subject changes, all other dependents are notified and updated.
+The main structure is created with a Subject (AKA Publisher or Observable),
+which should be an interface or abstract class so the application remains loosely coupled.
+The Subject exposes methods to attach and detach observers dynamically at runtime and this would help to prevent memory leakage.
+A ConcreteSubject implements the Subject.
+Observers (AKA Subscribers) should also be interfaces or abstract classes,
+and must define an update() method that is implemented by concrete classes.
+ConcreteObservers are implementations of the Observer abstraction and are dependent on the Subject interface or abstract class,
+and they should be notified whenever the Subject updates.
+The Subject stores a collection of Observers and has a notify() method responsible for informing them
+when the Subject's state changes.
+The Subject is also capable of calling notify() in a specific order.
+In some cases, we can filter the Observers and only notify specific ones.
+This filtering logic can be placed either inside the notify() method of the Subject or inside each Observer's update() method.
+The Subject does not know anything about the ConcreteObservers and should only reference the Observer abstraction,
+so the program remains loosely coupled.
+There are also two ways to communicate between the Subject and its Observers:
+Push style: The ConcreteSubject passes the data directly while calling notify() on each Observer.
+This style is not recommended because it creates strong coupling and may pass unnecessary data to Observers.
+Pull style: The Subject only calls the notify() method,
+and each Observer holds a reference to the Subject to pull the data it needs.
+This style is loosely coupled, more flexible, and generally recommended
+Although the Observer must maintain a reference to the Subject, this is considered an acceptable dependency and does not violate loose coupling.

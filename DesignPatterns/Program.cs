@@ -1,20 +1,16 @@
-﻿using DesignPatterns.Behavioral.Strategy;
+﻿using DesignPatterns.Behavioral.Observer;
+
+var subject = new Subject();
+var con1 = new ConcreteObserver1();
+var con2 = new ConcreteObserver2();
+subject.Attach(con1);
+subject.Attach(con2);
 
 
-var context = new Context();
-// the logic implementation of selecting different strategies is not like the code bellow 
-// it must be done in the layer above Context because the Context in this design pattern is just an invoker
-// and should not know anything about strategies and logics 
-// and also it can be done through DI or using Factory design pattern so still we can get rid of 
-// if/else switch statements 
 
-string myData = "this is a data";
-context.Execute(new Strategy1(),myData);
+subject.Data = "This is data number 1";
 
-if (true)
-    context.Execute(new Strategy3(), myData);
-else
-    context.Execute(new Strategy2(),myData);    
+// further in the code 
 
-
+subject.Data = "This is data number 2";
 Console.ReadKey();
