@@ -1,4 +1,4 @@
-﻿The Strategy design pattern is a behavioral design pattern based on composition.
+﻿ The Strategy design pattern is a behavioral design pattern based on composition.
 Its intention is to enable an object to change its behavior at runtime by encapsulating a family of algorithms and making them interchangeable,
 without modifying the main code, eliminates unwanted conditonal statments 
 and also prevents multiple inheritances and Context class complexity,

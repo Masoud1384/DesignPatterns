@@ -1,6 +1,7 @@
-﻿The state design pattern is another behavioral design pattern which allows us to create a mechanism
-that whenever an object's state changes, the behavior of the object changes too, and also gets rid of
-if/else conditions in the code.
+﻿The state design pattern is another behavioral design pattern which 
+allow an object to alter its behavior when its internal state changes.
+The object will appear to change its class.
+and also remove if/else conditions in the code.
 The state design pattern contains a Context,
 which is the Invoker of state and also stateful holder.
 an interface that declares state-specific behavior methods, such as Handle() or domain-specific operations.

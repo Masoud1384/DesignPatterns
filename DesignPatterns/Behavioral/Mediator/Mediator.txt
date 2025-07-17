@@ -1,0 +1,21 @@
+﻿The intention of Mediator is to define an object that encapsulates how a set of objects interact.
+Mediator promotes loose coupling by keeping objects from referring to each other explicitly,
+and it lets you vary their interaction independently.
+By encapsulating interaction in a Mediator object, you avoid having to define all the interactions explicitly.
+Colleagues communicate with their Mediator whenever they would have otherwise communicated with each other.
+This design pattern fixes the problem of communication and dependencies between different objects
+by centralizing their interaction logic in a single object.
+It helps us build maintainable, testable, and flexible applications by making the code loosely coupled.
+However, if the interaction logic becomes too large or too complex, the Mediator object may turn into a God Object,
+which makes the code harder to maintain and evolve, and the solution is to create sub-mediators to prevent this problem.
+Unlike the Observer design pattern that implements a one-way relationship between objects,
+the Mediator also communicates with other objects, and those communicate with the Mediator too.
+The Mediator object, which implements the logic of interaction, is basically a coordinator.
+this design pattern can be implmeneted through an IMediator which implements the logic that the mediator should have 
+A ConcreteMediator implements the IMediator interface and encapsulates the communication logic between the colleagues.
+ConcreteColleague objects do not communicate directly with each other; 
+instead, they interact through the IMediator interface.
+and their communication is done by using imediator.
+In .net there is a library called MediateR that simplifies the implementation of the Mediator pattern 
+by allowing components like requests,handlers, and notifications to communicate through a central coordinator 
+without direct dependencies between them.

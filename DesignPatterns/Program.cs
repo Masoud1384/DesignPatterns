@@ -1,16 +1,18 @@
-﻿using DesignPatterns.Behavioral.Observer;
+﻿using DesignPatterns.Behavioral.Mediator;
 
-var subject = new Subject();
-var con1 = new ConcreteObserver1();
-var con2 = new ConcreteObserver2();
-subject.Attach(con1);
-subject.Attach(con2);
+var mediator = new ConcreteMediator();
+
+var col1 = new ConcreteColleague1(mediator);
+var col2 = new ConcreteColleague2(mediator);
+var col3 = new ConcreteColleague3(mediator);
+
+mediator.SetColleagues(col1, col2, col3);
+
+col1.SetData("");
+
+Console.WriteLine($"Col1: {col1.Data}");
+Console.WriteLine($"Col2: {col2.Data}");
+Console.WriteLine($"Col3: {col3.Data}");
 
 
-
-subject.Data = "This is data number 1";
-
-// further in the code 
-
-subject.Data = "This is data number 2";
-Console.ReadKey();
+Console.ReadLine();
